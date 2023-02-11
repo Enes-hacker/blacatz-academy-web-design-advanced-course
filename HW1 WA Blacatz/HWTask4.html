@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task 4</title>
+
+    <style>
+        .container{
+            display: flex;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            
+
+        }
+        .box{
+            
+            height: 190px;
+            background: silver;
+            width: 33%;
+            border: 1px solid black;
+        }
+
+        @media(max-width: 767px) {
+            .m100 {
+                display: flex;
+                width: 100%;
+                margin-bottom: 5px;
+
+                
+            }
+
+            p {
+                display: flex;
+                justify-content: flex-start;
+                align-items:center;
+               
+            }
+
+        }
+
+        @media(min-width: 768px) and (max-width: 1024px){
+            .t100 {
+                display: flex;
+                width: 100%;
+            }
+
+            .t50 {
+                display: flex;
+                width: 49%;
+                flex-wrap: nowrap;
+                margin-top: 10px;
+            }
+
+            p {
+                display: flex;
+                justify-content: flex-start;
+                align-items:center;
+               
+            }
+
+        }
+        
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box m100 t100">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Iste veniam saepe incidunt sequi aliquid architecto sint 
+                 expedita beatae suscipit deserunt corrupti repudiandae perspiciatis soluta,
+                 totam odit nostrum pariatur laborum exercitationem.</p>
+        </div>
+        <div class="box m100 t50">
+            <h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Iste veniam saepe incidunt sequi aliquid architecto sint 
+                 expedita beatae suscipit deserunt corrupti repudiandae perspiciatis soluta,
+                 totam odit nostrum pariatur laborum exercitationem.</p>
+        </div>
+        <div class="box m100 t50"><h1>Title</h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                 Iste veniam saepe incidunt sequi aliquid architecto sint 
+                 expedita beatae suscipit deserunt corrupti repudiandae perspiciatis soluta,
+                 totam odit nostrum pariatur laborum exercitationem.</p></div>
+
+    </div>
+    
+</body>
+</html>

@@ -1,0 +1,159 @@
+/*DEFAULT PROPERTIES THAT ALMOST EVERY WEBSITE SHOULD HAVE*/
+* {
+    box-sizing: border-box;
+    
+}
+
+body, html, h1, h2, p, ul, li {
+    margin: 0;
+  
+    
+}
+
+img{
+    width: 100%;
+}
+/*DEFAULT PROPERTIES THAT ALMOST EVERY WEBSITE SHOULD HAVE END*/
+/*HEADER*/
+.header{
+    
+    display: flex;
+    align-items: center;
+    background: linear-gradient(90deg, #76d5c0 0%, #00d4ff 100%);
+    padding: 20px;
+    width: 90%;
+}
+
+.logo{
+    text-align: center;
+   
+    width: 25%;
+
+}
+
+.logo img {
+    height: 4rem;
+    width: 9rem;
+}
+
+
+.menubar {
+   
+    text-align: center;
+   
+
+}
+
+.menubar ul li{
+    display: inline-block;
+    margin-left: 15px;
+    
+ 
+}
+
+
+
+
+.menubar ul li a{
+   
+    text-decoration: none;
+    font-size: 20px;
+    color: black;
+}
+
+.btn-header {
+    display: flex;
+    justify-content:right;
+    align-items: end;
+    width: 50%;
+    border: unset;
+    
+   
+}
+
+.btn-header button {
+   margin-left: 10px;
+   width: 120px;
+   border: unset;
+   padding: 3px 25px;
+}
+
+.btn-header button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/*HEADER*/
+
+/*INTRO*/
+
+.intro {
+    background-image:url(/images/deck.webp);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment:fixed ;
+    border: 1px solid black;
+    margin-top: 20px;
+    padding: 100px 100px;
+}
+
+.intro p, .intro h1{
+    margin-top: 0.5rem;
+    color: white;
+}
+
+.intro button {
+    width: 5.5rem;
+    margin-top: 2rem;
+}
+/*INTRO END*/
+
+/*MAIN*/
+.main{
+    background: linear-gradient(90deg, #76d5c0 0%, #00d4ff 100%);
+    margin-top: 1rem;
+    display: flex;
+    justify-content: space-evenly;
+   
+}
+
+.product{
+    width: 20%;
+}
+/*MAIN END*/
+
+/*LAST SECTION*/
+.last{
+    background: linear-gradient(90deg, #76d5c0 0%, #00d4ff 100%);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    margin-top: 2rem;
+
+}
+
+.image{
+    width: 35%;
+    
+
+}
+
+.description {
+    width: 35%;
+
+}
+
+.description {
+    margin-top: 6rem;
+}
+
+.description button, .description p{
+    margin-top: 1.2rem;
+}
+
+.description button {
+    padding: 2rem, 2rem;
+    width: 8rem;
+    height: 1.5rem;
+}
+/*LAST SECTION END*/

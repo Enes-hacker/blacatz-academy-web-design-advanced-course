@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mobile First</title>
+
+    <style>
+        /*Mobile first approach */
+        .container{
+           display: flex;
+           flex-wrap: wrap;
+           justify-content: space-between;
+        }
+
+        .box {
+            display: flex;
+            height: 100px;
+            background: silver;
+          
+            margin-bottom: 35px;
+            justify-content: center;
+            align-items: center;
+            font-size: 50px;
+        }
+
+        .d30{
+            width: 30%;
+
+        }
+
+        .d100{
+            width: 100%;
+        }
+
+    
+
+        @media  (max-width: 1024px) {  
+
+           
+
+            .b-45 {
+                width: 45%;
+            }
+
+            .b-100 {
+                width: 100%;
+            }
+
+            .b-20 {
+                width: 20%;
+            }
+
+            .b-70 {
+                width: 70%;
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box b-45 d100">1</div>
+        <div class="box b-45 d30">2</div>
+        <div class="box b-100 d30">3</div>
+        <div class="box b-20 d30">4</div>
+        <div class="box b-70 d100">5</div>
+      
+    </div>
+</body>
+</html>
