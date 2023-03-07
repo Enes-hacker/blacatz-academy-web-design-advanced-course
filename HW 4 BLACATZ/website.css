@@ -1,0 +1,1119 @@
+* {
+    box-sizing: border-box;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+body,
+html {
+    margin: 0;
+    padding: 0;
+
+}
+
+img {
+    width: 100%;
+}
+
+h1 {
+    font-family: 'Pinyon Script', cursive, sans-serif;
+    color: var(--caption-color);
+
+}
+
+img {
+    width: 100%;
+}
+
+:root {
+    --main-color: rgba(243, 242, 248, 255);
+    --caption-color: #beaa60;
+}
+
+/*MENU*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    height: 75px;
+    background: var(--main-color);
+    padding: 0 3rem;
+
+}
+
+.logo {
+    color: var(--caption-color);
+    font-size: 26px;
+    letter-spacing: 0.3rem;
+}
+
+.menubar {
+
+    margin-right: 20rem;
+
+}
+
+.menubar ul li {
+    display: inline;
+}
+
+.menubar ul li a {
+    text-decoration: none;
+    margin-left: 3rem;
+    color: black;
+
+
+}
+
+.menubar ul li a:hover {
+    color: var(--caption-color);
+
+}
+
+.icons {
+    width: 20%;
+
+}
+
+.icons i {
+    margin-left: 2rem;
+
+
+}
+
+.icons i:hover {
+    cursor: pointer;
+    color: var(--caption-color);
+}
+
+/*MENU END*/
+
+/*HEADER*/
+.header-part {
+    width: 100%;
+    height: 100vh;
+    background: var(--main-color);
+}
+
+.header-banner {
+    /*Lesson that I have learned don't name a div element header name it header-... something */
+    width: 58%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: center;
+    margin-top: -10rem;
+    background: var(--main-color);
+
+}
+
+.header-banner div {
+    color: var(--caption-color);
+    font-family: 'Pinyon Script', cursive, sans-serif;
+    font-size: 42px;
+
+}
+
+.header-banner h1 {
+    color: black;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.2em;
+}
+
+.header-banner button {
+    background: var(--caption-color);
+    color: white;
+    border-radius: 1rem;
+    border: unset;
+    padding: 0.4rem 1.5rem;
+    margin-top: 2rem;
+}
+
+.header-banner button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/*HEADER END*/
+
+/*SECTION 3RD GRID*/
+.section-three {
+    height: 140vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    /*4 is for columns 1fraction(fr) for size*/
+    grid-auto-rows: 7rem;
+    /*size of the rows*/
+    gap: 0.3rem;
+    width: 60%;
+}
+
+.box {
+    background-color: var(--main-color);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+
+}
+
+
+
+.box:nth-child(1) {
+    background: url(/images/kitchen.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-column: 1/3;
+    grid-row: 1/4;
+}
+
+.box:nth-child(2) {
+    background: url(/images/table.jpg);
+    background-size: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+    grid-column: 3/4;
+    grid-row: 1/3;
+}
+
+.box:nth-child(3) {
+    background: url(/images/table.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-column: 4/5;
+    grid-row: 1/3;
+}
+
+.box:nth-child(4) {
+    background: url(/images/table.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-column: 1/3;
+    grid-row: 4/6;
+}
+
+.box:nth-child(5) {
+    background: url(/images/wood.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-column: 3/5;
+    grid-row: 3/5;
+}
+
+.box:nth-child(6) {
+    background: url(/images/picture3.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-column: 1/2;
+    grid-row: 6/8;
+}
+
+.box:nth-child(7) {
+    background: url(/images/collection.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-column: 2/3;
+    grid-row: 6/8;
+}
+
+.box:nth-child(8) {
+    background: url(/images/wood.jpg);
+    background-size: cover;
+    background-position: center center;
+    grid-column: 3/5;
+    grid-row: 5/8;
+}
+
+
+/*Text header positioning*/
+.inner-box-one {
+    position: absolute;
+    bottom: 1.5rem;
+}
+
+.inner-box-one h2 {
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.inner-box-one h1 {
+    text-align: center;
+    font-size: 24px;
+    letter-spacing: 0.2rem;
+}
+
+
+.inner-box-four {
+    position: absolute;
+    bottom: 1.5rem;
+    right: 1.5rem;
+}
+
+.inner-box-four h2 {
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.inner-box-four h1 {
+    font-size: 24px;
+    text-align: right;
+    letter-spacing: 0.2rem;
+}
+
+
+
+
+.inner-box-eight {
+    position: absolute;
+    bottom: 1.5rem;
+    left: 1.5rem;
+}
+
+.inner-box-eight h2 {
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.2rem;
+    text-transform: uppercase;
+}
+
+.inner-box-eight h1 {
+    font-size: 24px;
+    letter-spacing: 0.2rem;
+}
+
+.inner-box-five {
+    border: 1px dashed;
+    position: absolute;
+    left: 1rem;
+    padding: 0.5rem;
+}
+
+.inner-box-five h1 {
+    font-size: 16px;
+    letter-spacing: 0.2rem;
+    color: silver;
+}
+
+.inner-box-five h2 {
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.6rem;
+    font-size: 32px;
+    text-align: center;
+    color: #898988;
+}
+
+.inner-box-five h2 span {
+    color: #beaa60;
+
+}
+
+.inner-box-five h3 {
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.6rem;
+    font-size: 32px;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+
+
+
+/*Text header positioning end*/
+
+/*SECTION 3RD GRID END*/
+
+/*SECTION 4*/
+.section-four {
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+.section-four h2 {
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.22rem;
+    text-align: center;
+}
+
+.section-four h1 {
+    text-align: center;
+}
+
+.section-four ul {
+    margin-top: 2rem;
+
+}
+
+.section-four ul li {
+    display: inline;
+
+}
+
+.section-four ul li a {
+    margin-left: 1.4rem;
+    text-decoration: none;
+    color: black;
+}
+
+.section-four ul li a:hover {
+    color: var(--caption-color);
+}
+
+/*SECTION 4 END*/
+
+/*SECTION FIVE FLEX*/
+.section-five {
+    width: 100%;
+    padding: 3rem 15rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.flexbox {
+    display: flex;
+    width: 23%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.flexbox img {
+    border: 1px solid #898988;
+    height: auto;
+    object-fit: cover;
+    margin-bottom: 1rem;
+
+}
+
+.rating-price {
+
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: baseline;
+}
+
+.flexbox h2 {
+    font-size: 12px;
+    color: silver;
+    letter-spacing: 0.2rem;
+    width: 100%;
+}
+
+.rating p {
+    color: var(--caption-color);
+}
+
+.rating {
+    font-size: 8px;
+}
+
+.rating-second i {
+    font-size: 20px;
+    margin-left: 0.7rem;
+}
+
+
+
+.rating-second i:nth-child(4) {
+    color: white;
+    border: 10px solid var(--caption-color);
+    border-radius: 2.3rem;
+    background-color: #beaa60;
+}
+
+.rating-second i:nth-child(1),
+.rating-second i:nth-child(2),
+.rating-second i:nth-child(3) {
+    border: 1px solid silver;
+    border-radius: 2.3rem;
+    padding: 0.6rem;
+}
+
+.rating-second i:hover {
+    cursor: pointer;
+    opacity: 0.8;
+}
+
+.section-five button {
+    background: white;
+    color: black;
+    border-radius: 1rem;
+    border: 1px solid gray;
+    padding: 0.3rem 1.6rem;
+    margin-top: 2rem;
+    text-transform: uppercase;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.section-five button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}
+
+/*SECTION FIVE FLEX END*/
+
+/*SECTION SIX*/
+.section-six {
+    background: var(--main-color);
+    height: 90vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-top: 9rem;
+    padding-bottom: 2rem;
+}
+
+.i-left {
+    height: 70vh;
+    width: 36%;
+}
+
+/*timer*/
+.timer {
+    display: flex;
+    justify-content: space-around;
+    padding: 4rem 0;
+}
+
+
+.timer-one {
+    /*2 borders design around timer numbers*/
+    position: relative;
+    border: 1px solid silver;
+    padding-top: 3.4rem;
+    padding-bottom: 3.7rem;
+    padding-left: 2.1rem;
+    padding-right: 2.1rem;
+    border-radius: 3.7rem;
+}
+
+.border {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0.3rem;
+    bottom: 0.3rem;
+    border: 1px solid silver;
+    padding: 0 auto;
+    border-radius: 3rem;
+}
+
+.timer span {
+    margin-left: 1rem;
+    color: var(--caption-color);
+}
+
+.numbers {
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 28px;
+}
+
+.remains {
+    text-align: center;
+    font-size: 12px;
+}
+
+/*timer end*/
+
+/*description*/
+.description {
+    text-align: center;
+}
+
+.description h2,
+.description p {
+    font-family: 'Philosopher', sans-serif;
+}
+
+.description p {
+    color: #898988;
+    margin-top: 1rem;
+    font-size: 14px;
+}
+
+.description h2 {
+    letter-spacing: 0.3rem;
+}
+
+/*description end*/
+
+/*description button*/
+.btn-description {
+    text-align: center;
+
+}
+
+.btn-description button {
+    background: var(--main-color);
+    color: black;
+    border-radius: 1rem;
+    border: 1px solid gray;
+    padding: 0.3rem 1.6rem;
+    margin-top: 2rem;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.btn-description button:hover {
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+/*description button*/
+
+.i-right {
+    /*image*/
+    background: url(/images/picture3.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    width: 32%;
+    border: 1.8px solid black;
+    margin-bottom: 4rem;
+}
+
+/*SECTION SIX END*/
+
+/*SECTION SEVEN*/
+.section-seven {
+    width: 80%;
+    height: 195vh;
+    margin: 0 auto;
+
+
+}
+
+.seven-title {
+    text-align: center;
+    padding-bottom: 2rem;
+    padding-top: 3.5rem;
+}
+
+.seven-title h1 {
+    font-size: 22px;
+    letter-spacing: 0.2rem;
+}
+
+.seven-title p {
+    font-size: 22px;
+    letter-spacing: 0.2rem;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.grid-seven {
+
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: 9rem;
+    column-gap: 1rem;
+    height: 90vh;
+}
+
+.box-seven {
+    border: 1px solid silver;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.box-seven:nth-child(1) {
+    grid-row: 1/8;
+    grid-column: 1/3;
+    background: url(/images/kitchen.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box-seven:nth-child(2) {
+    grid-row: 1/4;
+    grid-column: 3;
+    background: url(/images/bedroom2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box-seven:nth-child(3) {
+    grid-row: 1/4;
+    grid-column: 4;
+    background: url(/images/bedroom.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.box-seven:nth-child(4) {
+    grid-row: 4/5;
+    grid-column: 3;
+    border: unset;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box-seven-header {
+    width: 100%;
+    height: 1rem;
+    padding-top: 2.5rem;
+    color: #898988;
+}
+
+.box-seven-price {
+    color: var(--caption-color);
+    font-size: 22px;
+}
+
+
+
+.box-seven:nth-child(5) {
+    grid-row: 4/5;
+    grid-column: 4;
+    border: unset;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box-seven:nth-child(6) {
+    grid-row: 8/9;
+    grid-column: 1/3;
+    border: unset;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box-seven:nth-child(7) {
+    grid-row: 8/9;
+    grid-column: 2/3;
+}
+
+.box-seven:nth-child(7) {
+    grid-row: 5/8;
+    grid-column: 3/4;
+    background: url(/images/wood.jpg);
+    background-size: cover;
+    background-position: fixed;
+    background-repeat: no-repeat;
+}
+
+.box-seven:nth-child(8) {
+    grid-row: 5/8;
+    grid-column: 4/5;
+    background: url(/images/terrasse.jpg);
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+
+}
+
+.box-seven:hover {
+    transform: scale(1.1);
+}
+
+.box-seven:nth-child(9) {
+    grid-row: 8/9;
+    grid-column: 3/4;
+    border: unset;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.box-seven:nth-child(10) {
+    grid-row: 8/9;
+    grid-column: 4/5;
+    border: unset;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+/*button*/
+.btn-seven button {
+    background: var(--main-color);
+    color: black;
+    border-radius: 1rem;
+    border: 1px solid gray;
+    padding: 0.3rem 1.6rem;
+    margin-top: -4rem;
+    font-family: 'Philosopher', sans-serif;
+}
+
+.btn-seven {
+    grid-row: 9/10;
+    grid-column: 2/4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-seven button:hover {
+    cursor: pointer;
+    opacity: 0.8;
+
+}
+
+/*button end*/
+
+/*SECTION SEVEN END*/
+
+/*SECTION EIGHT*/
+.section-eight {
+    /*WHOLE SECTION CONTAINER*/
+    height: 100vh;
+    background: var(--main-color);
+
+}
+
+/*Title start*/
+
+.title-eight {
+    padding-top: 3.5rem;
+}
+
+.title-eight h1 {
+    font-size: 24px;
+    letter-spacing: 0.3rem;
+}
+
+.title-eight h1,
+.title-eight p {
+    text-align: center;
+}
+
+.title-eight p {
+    font-family: 'Philosopher', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.2rem;
+}
+
+/*title end*/
+
+.flex-eight {
+    width: 65%;
+    height: 70vh;
+    margin: 2.5rem auto;
+    background: var(--main-color);
+    display: flex;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+/*Left Side*/
+
+.img-eight-left {
+    width: 100%;
+    height: 50vh;
+    background: white;
+    background: url(/images/collection.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+
+.img-eight-left:hover {
+    transform: scale(1.1);
+}
+
+.left-side {
+    width: 50%;
+    height: 70vh;
+}
+
+.left-side h2 {
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.left-side p {
+    font-size: 10px;
+    text-align: center;
+    color: silver;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.left-side h4 a {
+    text-align: right;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 11px;
+    padding: 1rem;
+    color: #898988;
+    text-decoration: none;
+}
+
+.left-side h4 a:hover {
+    cursor: pointer;
+    color: #beaa60;
+}
+
+.left-side h4 {
+    text-align: center;
+    padding: 1rem;
+}
+
+/*Left Side End*/
+
+/*RIGHT SIDE*/
+
+.img-eight-right {
+    width: 100%;
+    height: 50vh;
+    background: white;
+    background: url(/images/table.jpg);
+    background-size: cover;
+    background-position: center center;
+
+}
+
+.img-eight-right:hover {
+    transform: scale(1.1);
+}
+
+.right-side {
+    width: 50%;
+    height: 70vh;
+}
+
+.right-side h2 {
+    text-align: center;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.2rem;
+    font-size: 20px;
+    padding: 1rem;
+}
+
+.right-side p {
+    font-size: 10px;
+    text-align: center;
+    color: silver;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.1rem;
+}
+
+.right-side h4 a {
+    text-align: right;
+    font-family: 'Philosopher', sans-serif;
+    letter-spacing: 0.1rem;
+    font-size: 11px;
+    padding: 1rem;
+    color: #898988;
+    text-decoration: none;
+}
+
+.right-side h4 a:hover {
+    cursor: pointer;
+    color: #beaa60;
+}
+
+.right-side h4 {
+    text-align: center;
+    padding: 1rem;
+}
+
+/*RIGHT SIDE*/
+
+/*SECTION EIGHT END*/
+
+/*FOOTER*/
+footer {
+    /*size, width, height of full section*/
+    height: 60vh;
+    width: 100%;
+}
+
+.footer-section {
+    /*main components parts in the footer section height, width etc*/
+    height: 40vh;
+    width: 65%;
+    margin: 3.5rem auto;
+}
+
+.details-part {
+    display: flex;
+}
+
+.title-footer {
+    font-size: 42px;
+    letter-spacing: 0.3rem;
+    color: var(--caption-color);
+    padding: 0.5rem;
+}
+
+/*details*/
+/*part 1*/
+.details {
+    width: 33%;
+}
+
+.details p {
+    margin-top: 1.5rem;
+    color: #898988;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 14px;
+}
+
+/*part 2*/
+
+.details-account {
+    width: 8%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.details-account a {
+    color: #898988;
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 13px;
+    margin-top: 1.5rem;
+
+}
+
+.details-account a:hover {
+    color: var(--caption-color);
+
+}
+
+.details-account a:nth-child(3) {
+    color: var(--caption-color);
+}
+
+/*part 3*/
+.details-help {
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.details-help a {
+    color: #898988;
+    text-decoration: none;
+    text-align: left;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 13px;
+    margin-top: 1.7rem;
+    margin-left: 4rem;
+
+}
+
+.details-help a:hover {
+    color: var(--caption-color);
+
+}
+
+/*part 4*/
+
+/*footer menu*/
+.footer-menu ul li {
+    display: inline;
+    justify-content: space-between;
+}
+
+.footer-menu ul li a {
+    margin-left: 1rem;
+    padding: 0.2rem;
+    text-decoration: none;
+    color: #898988;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 12px;
+}
+
+.footer-menu ul li a:hover {
+    color: var(--caption-color);
+}
+
+.footer-menu {
+    width: 80%;
+    margin: 2rem auto;
+    display: flex;
+    justify-content: space-evenly;
+
+}
+
+hr {
+    color: #fff;
+    margin-top: -1rem;
+}
+
+/*footer menu end*/
+
+/*button part*/
+.details-btn {
+    width: 40%;
+    padding: 2rem 4rem;
+
+}
+
+.details-btn button {
+    border: 1px solid #d8d8d9;
+    padding: 0.4rem 1.05rem;
+    background: white;
+    font-family: 'Philosopher', sans-serif;
+    color: #898988;
+    margin-top: 0.4rem;
+    margin-left: 0.1rem;
+}
+
+.details-btn button:hover {
+    cursor: pointer;
+    opacity: 0.7;
+    color: var(--caption-color);
+    border: 1px solid var(--caption-color);
+
+}
+
+/*button part end*/
+/*details end*/
+
+
+/*copyright*/
+.copyright {
+    text-align: center;
+    color: #898988;
+    font-family: 'Philosopher', sans-serif;
+    font-size: 11.5px;
+    letter-spacing: 0.1rem;
+}
+
+.copyright span {
+    color: var(--caption-color);
+    text-transform: uppercase;
+}
+
+/*copyright end*/
+/*FOOTER END*/
