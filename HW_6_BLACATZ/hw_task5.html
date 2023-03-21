@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moving Object - Gaming Stuff</title>
+    <style>
+        #player {
+            height: 60px;
+            width: 60px;
+            margin-top: 10px;
+
+        }
+
+        #player-two {
+            position: absolute;
+            height: 60px;
+            width: 60px;
+            margin-top: 90px;
+
+        }
+
+        img {
+            width: 100%;
+        }
+
+        #body {
+            background: url(/images/The_Park.webp);
+            background-size: cover;
+            background-repeat: no-repeat;
+            position: relative;
+        }
+    </style>
+</head>
+
+<body id="body">
+
+    <div id="player" tabindex="1">
+        <img src="/images/mordecai.png" alt="">
+    </div>
+
+    <div id="player-two">
+        <img src="/images/rigby.png" alt="">
+    </div>
+
+
+</body>
+
+
+<script>
+    let body = document.querySelector('#body');
+    let player = document.querySelector('#player');
+    let playertwo = document.querySelector('#player-two');
+    let marginTop = 0;
+    let marginLeft = 0;
+    body.addEventListener('keydown', function (e) {
+        console.log(e.code);
+        let press = e.code;
+
+        console.log(player.style.marginTop);
+
+
+
+        if (press == 'ArrowUp') {
+            marginTop -= 10;
+            player.style.marginTop = `${marginTop}px`;
+        }
+        else if (press == 'ArrowDown') {
+            marginTop += 10;
+            player.style.marginTop = `${marginTop}px`;
+        }
+        else if (press == 'ArrowLeft') {
+            marginLeft -= 10;
+            player.style.marginLeft = `${marginLeft}px`;
+        }
+        else if (press == 'ArrowRight') {
+            marginLeft += 10;
+            player.style.marginLeft = `${marginLeft}px`;
+        }
+    });
+
+
+    body.addEventListener('keydown', function (e) {
+        console.log(e.code);
+
+        let presstwo = e.code;
+        console.log(playertwo.style.marginTop);
+        if (presstwo == 'KeyW') {
+            marginTop -= 10;
+            playertwo.style.marginTop = `${marginTop}px`;
+        }
+        else if (presstwo == 'KeyS') {
+            marginTop += 10;
+            playertwo.style.marginTop = `${marginTop}px`;
+        }
+        else if (presstwo == 'KeyA') {
+            marginLeft -= 10;
+            playertwo.style.marginLeft = `${marginLeft}px`;
+        }
+        else if (presstwo == 'KeyD') {
+            marginLeft += 10;
+            playertwo.style.marginLeft = `${marginLeft}px`;
+        }
+
+        console.log(e.code);
+    });
+</script>
+
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Salary Calculator</title>
+</head>
+<body>
+    <label for="text">Брутна заплата: </label>
+    <input id="brutto" type="number">
+
+    <div id="netto"></div>
+    <button onclick="salary()">калкулирай</button>
+
+    <script>
+        function salary() {
+        let salary = document.getElementById('brutto').value; /*слагаме value, понеже ще въвеждаме стойност за заплатата*/
+        let netSalaryElement = document.getElementById('netto'); /*Тука ще се изведе резултата*/
+
+    salary = parseFloat(salary); /*парсваме стринга в инт*/
+    let netSalary = salary - (salary * 0.23);
+    let deduction = salary * 0.23; 
+    netSalaryElement.innerHTML = `Salary is: ${netSalary} Deduction: ${deduction}`;
+
+        }
+    </script>
+    
+</body>
+</html>

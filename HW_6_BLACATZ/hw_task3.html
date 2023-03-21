@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prime Numbers</title>
+</head>
+<body>
+    <div>
+        <label for="text">Enter a number</label>
+        <input type="number" id="number">
+        <button onclick="textMessage()">Click</button>
+        <!--Fuction textmessage() will work when you click the button aand onclick defines the function type-->
+    </div>
+
+    <script>
+        function textMessage() {
+            let num = document.getElementById('number');
+            let numInput = num.value;
+
+
+
+            if (numInput == 2 || numInput == 3) {
+        alert("The number is prime");
+        return;
+    }
+
+            if (numInput % 2 == 0 || numInput < 2) {
+        alert("Number is not prime");
+        return;
+    }
+
+       for (let i = 3; i <= Math.sqrt(numInput); i += 2) {
+        if (numInput % i == 0) {
+            alert("Number is not prime");
+            return;
+         }
+    }
+
+    alert("The number is prime");
+
+        }
+
+        textMessage();
+    </script>
+    
+</body>
+</html>

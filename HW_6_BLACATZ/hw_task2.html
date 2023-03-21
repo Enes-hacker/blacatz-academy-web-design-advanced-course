@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Picter swutch</title>
+</head>
+<body>
+    <div>
+        <img src="/images/1.jpg" id="img" style="width: 100%;" alt="">
+    </div>
+    <div>
+        <button onclick="changeImage('prev')">Previous</button>
+        <button onclick="changeImage('next')">Next</button>
+    </div>
+
+    <script>
+        let current = 1;
+
+        function changeImage(action) {
+            let img = document.getElementById('img');
+
+            if (action == 'next') {
+                current++;
+                if(current > 2){
+                    current = 1;
+                }
+            }
+            else {
+                current--;
+                if(current <= 0){
+                    current = 2;
+                }
+            }
+            img.setAttribute('src', `/images/${current}.jpg`)
+        }
+    </script>
+    
+</body>
+</html>

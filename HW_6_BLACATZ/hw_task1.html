@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hello Message</title>
+</head>
+<body>
+    <div>
+        <label for="text">text</label>
+        <input type="text" id="text">
+        <button onclick="textmessage()">Click</button>
+        <!--Fuction textmessage() will work when you click the button aand onclick defines the function type-->
+    </div>
+    
+    
+    
+
+    <script>
+        function textmessage(){
+            let name = document.getElementById('text');
+            let input = name.value;
+            alert('Hello' + " " + input);            /*Firstly we create name variable and value helps to set
+            value/string on that element (cin in c++ scanner in java console.WriteLine in C#)*/
+        }
+
+        textmessage();
+    </script>
+</body>
+</html>
