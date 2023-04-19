@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        input {
+            display: block;
+        }
+        body{
+            background: linear-gradient(lightgreen, lightblue);
+            background-attachment: fixed;  
+        }
+
+        #form{
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            align-items: center;
+            border: 1px solid black;
+            border-radius: 1rem;
+            background: whitesmoke;
+            width: 20%;
+            padding: 2rem;
+            text-align: center;
+
+        }
+
+        #form:hover{
+            transform: scale(1.1);
+        }
+    </style>
+</head>
+
+<body>
+    <form id="form" action="https://example.com/submit">
+        <div>
+            <label>Email:</label>
+            <input type="email" id="email" placeholder="example@gmail.com" 
+            required/>
+            <span class="error" id="errorEmail"></span>
+        </div>
+
+        <div>
+            <label>Password:</label>
+            <input type="password" id="password" 
+            required/>
+            <span class="error" id="errorPasword"></span>
+        </div>
+
+        <div>
+            <br>
+            <button type="submit" id="register">Register</button>
+        </div>
+    </form>
+
+    <script>
+        let register = document.getElementById('register');
+        register.addEventListener('click', function(){
+            let email = document.getElementById('email').value;
+            let password = document.getElementById('password').value;
+            let errorEmailEl = document.getElementById('errorEmail');
+            let errorPaswordEl = document.getElementById('errorPasword');
+            hasErrors = false;
+            errorEmailEl.innerHTML = '';
+            errorPaswordEl.innerHTML = '';
+
+            if(email.length > 20){
+                errorEmailEl.innerHTML = "Invalid email length[20]";
+                hasErrors = true;
+            }
+
+            if(email.length == 0){
+                errorEmailEl.innerHTML = "required";
+                hasErrors = true;
+            }
+
+            if(password.length < 6){
+                errorPaswordEl.innerHTML = 'Invalid password length[6]';
+                hasErrors = true;
+            }
+
+            if(password.length == 0){
+                errorPaswordEl.innerHTML = 'required';
+                hasErrors = true;
+            }
+
+            if(hasErrors === false) {
+                document.getElementById('form').submit();
+            }
+
+        });
+
+    </script>
+
+</body>
+
+</html>
