@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #table,
+        td,
+        tr {
+            border: 1px solid black;
+            border-collapse: collapse;
+            width: 15%;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="table"></div>
+
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"
+        integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+    <script>
+        const productData = [
+            { name: 'Milk', price: 5 + "$", quantity: 5 },
+            { name: 'Bread', price: 1 + "$", quantity: 10 },
+            { name: 'Eggs', price: 0.5 + "$", quantity: 20 },
+            { name: 'Yoghurt', price: 3 + "$", quantity: 5 },
+            { name: 'Cheese', price: 6 + "$", quantity: 15 },
+            { name: 'Chicken', price: 8, quantity: 5 },
+            { name: 'Brocolli', price: 3, quantity: 20 },
+        ];
+
+        function createTable(products) {
+            let html = '<table>';
+            html += '<tr>';
+            html += '<th>Name</th><th>Price</th>';
+            html += '<th>Quantity</th>';
+            html += '</tr>';
+
+
+            for (let i = 0; i < products.length; i++) {
+
+                html += '<tr>';
+                html += `<td>${products[i].name}</td>`;
+                html += `<td>${products[i].price}</td>`;
+                html += `<td>${products[i].quantity}</td>`;
+                html += '</tr>';
+            }
+
+
+            html += '</table>';
+
+            $('#table').html(html);
+        }
+        $(function () {
+            createTable(productData);
+
+        });
+
+    </script>
+</body>
+
+</html>
