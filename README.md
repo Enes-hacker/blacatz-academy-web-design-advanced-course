@@ -1,5 +1,5 @@
 # blacatz-academy-web-design-advanced-course
-Advance your web design skills with Blackatz Academy's Advanced Web Design course repository. Build on your beginner's knowledge and create stunning, functional websites. Explore the latest design trends and advanced technologies in this comprehensive course. Join us on this exciting journey!
+Course Content: HTML, CSS, BOOTSTRAP, Javascript, jQuery
 
 HW 1 - IS About Making A simle design with Flexbox
 HW 2 - IS About Grid model with media queries.
